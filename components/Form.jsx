@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import { Suspense } from 'react';
 
 const Form = ({type,post,setPost,submitting,handleSubmit}) => {
 
   return (
+    <Suspense>
     <session className='w-full max-w-full flex-start flex-col'>
         <h1 className='head_text text-left'>
           <span className='blue_gradient'>{type} Post</span>
@@ -68,6 +70,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
 
         </form>
     </session>
+    </Suspense>
   )
 }
 
